@@ -1,0 +1,13 @@
+name: PR Verifier
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions: {}
+
+jobs:
+  verify-pr-title:
+    permissions:
+      pull-requests: read
+    uses: rossoctl/.github/.github/workflows/pr-verifier-required.yml@89bd5f961c3a91253d4bb54de69faff47397abcd # 2026-07-21
