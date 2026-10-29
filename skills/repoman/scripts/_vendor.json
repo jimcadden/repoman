@@ -1,7 +1,7 @@
 {
   "source_repo": "rossoctl/automation",
-  "source_sha": "0311752eba5350c74b8c9650137d3e6da65bd547",
-  "vendored_at": "2026-10-23T03:46:40Z",
+  "source_sha": "543c0628f35316e69939adb3f4d8fa48629e2711",
+  "vendored_at": "2026-10-29T14:04:26Z",
   "files": [
     "automation-health-dashboard.sh",
     "core.sh",
@@ -25,6 +25,7 @@
     "repoman-requirements.sh",
     "repoman-run.sh",
     "repoman-setup.sh",
-    "weekly-report.sh"
+    "weekly-report.sh",
+    "link-check.py"
   ]
 }
