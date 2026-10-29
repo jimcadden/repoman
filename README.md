@@ -18,6 +18,8 @@ Built to the [Agent Skills specification](https://agentskills.io/specification).
 | [github-pr-review](skills/github-pr-review/) | Automated PR review: conventions, security, CI status, inline comments |
 | [byo-rossoctl-cortex](skills/byo-rossoctl-cortex/) | Bring up a local rossoctl cortex (AuthBridge plugin pipeline) to host an agent; per-agent LiteLLM budget tracking isolated by env var |
 | [repo-sync](skills/repo-sync/) | Keep local clones of the enrolled repos current: clone missing ones, fast-forward pull the rest, read-only toward GitHub |
+| [doc-drift-scanner](skills/doc-drift-scanner/) | Scan repos for documentation drift (paths, flags, enums, versions, absence claims, changelog vs release dates) |
+| [doc-drift-fixer](skills/doc-drift-fixer/) | Re-verify doc-drift findings and open mechanical documentation fix PRs |
 | [hypershift](skills/hypershift/) | Full HyperShift (hosted OpenShift on AWS) cluster lifecycle across 7 skills — setup, preflight, quotas, create/destroy, debug, TTL-based cleanup; also needs `aws`, `oc`, `ansible` |
 
 ## Installation
@@ -31,9 +33,9 @@ Built to the [Agent Skills specification](https://agentskills.io/specification).
 
 **Recommended: install `repoman`.** The `repoman` plugin is self-contained — it
 bundles the RepoMan entrypoint, every program skill (link-health, dep-bump,
-pr-review, repo-sync, automation-health, weekly-report) with their scanner and
-fixer skills, and the engine scripts. One install gives you the whole system and
-lets you enable more programs on the fly:
+pr-review, repo-sync, automation-health, weekly-report, doc-drift) with their
+scanner and fixer skills, and the engine scripts. One install gives you the
+whole system and lets you enable more programs on the fly:
 
 ```
 /plugin install repoman@rossoctl-repoman
